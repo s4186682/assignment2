@@ -1,0 +1,178 @@
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+   <style>
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #dbeafe, #e0f2fe, #f8fafc);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wrapper {
+    width: 1000px;
+    padding: 70px;
+    background: linear-gradient(145deg, #ffffff, #eef6ff);
+    border-radius: 34px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 84px;
+
+    box-shadow:
+        0 30px 80px rgba(30, 64, 175, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.image-container img {
+    width: 175px;
+    height: 175px;
+    border-radius: 30px;
+    display: block;
+    transition: all 0.3s ease;
+    box-shadow: 
+    0 6px 16px rgba(0, 0, 0, 0.18),
+    0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.image-container img:hover {
+    transform: scale(1.06);
+
+    box-shadow:
+        0 0 18px rgba(80, 220, 255, 0.8),
+        0 0 35px rgba(80, 220, 255, 0.4),
+        0 12px 25px rgba(0, 0, 0, 0.25);
+        filter: brightness(1.15);
+}
+</style>
+</head>
+
+
+
+    
+    <body>
+
+<div class="wrapper">
+
+    <div class="row">
+        <div class="image-container">
+           <img id="donut1" src="img/scan.png" width="160" height="160"
+    onmouseover="this.src='img/scan-hover.png'"
+    onmouseout="this.src='img/scan.png'"
+    class="icon"
+/>
+        </div>
+
+        <div class="image-container">
+            <img id="donut2" src="img/connect.png" width="160" height="160"
+            onmouseover="this.src='img/connect-hover.png'"
+                 onmouseout="this.src='img/connect.png'">
+        </div>
+
+        <div class="image-container">
+            <img id="donut3" src="img/location.png" width="160" height="160"
+            onmouseover="this.src='img/location-hover.png'"
+                 onmouseout="this.src='img/location.png'">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="image-container">
+            <img id="donut4" src="img/transport.png" width="160" height="160"
+            onmouseover="this.src='img/transport-hover.png'"
+                 onmouseout="this.src='img/transport.png'">
+        </div>
+
+        <div class="image-container">
+            <img id="donut5" src="img/smart home.png" width="160" height="160"
+            onmouseover="this.src='img/smart home-hover.png'"
+                 onmouseout="this.src='img/smart home.png'">
+        </div>
+
+        <div class="image-container">
+            <img id="donut6" src="img/environment.png" width="160" height="160"
+            onmouseover="this.src='img/ent-hover.png'"
+                 onmouseout="this.src='img/environment.png'">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="image-container">
+            <img id="donut7" src="img/data.png" width="160" height="160"
+            onmouseover="this.src='img/dat-hover.png'"
+                 onmouseout="this.src='img/data.png'">
+        </div>
+
+        <div class="image-container">
+            <img id="donut8" src="img/warning.png" width="160" height="160"
+            onmouseover="this.src='img/warning-hover.png'"
+                 onmouseout="this.src='img/warning.png'">
+        </div>
+
+        <div class="image-container">
+            <img id="donut9" src="img/control.png" width="160" height="160"
+            onmouseover="this.src='img/control-hover.png'"
+                 onmouseout="this.src='img/control.png'">
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+var sound1 = new buzz.sound("sound/scan2.wav");
+var sound2 = new buzz.sound("sound/connect4.wav");
+var sound3 = new buzz.sound("sound/location.wav");
+var sound4 = new buzz.sound("sound/transport2.wav");
+var sound5 = new buzz.sound("sound/smart home2.wav");
+var sound6 = new buzz.sound("sound/environment.wav");
+var sound7 = new buzz.sound("sound/data250.wav");
+var sound8 = new buzz.sound("sound/warning1.wav");
+var sound9 = new buzz.sound("sound/control1.wav");
+window.onload = function() {
+
+    document.getElementById('donut1').addEventListener('click', function () {
+        sound1.play();
+    });
+    document.getElementById('donut2').addEventListener('click', function () {
+        sound2.play();
+    });
+    document.getElementById('donut3').addEventListener('click', function () {
+        sound3.play();
+    });
+     document.getElementById('donut4').addEventListener('click', function () {
+        sound4.play();
+    });
+    document.getElementById('donut5').addEventListener('click', function () {
+        sound5.play();
+    });
+    document.getElementById('donut6').addEventListener('click', function () {
+        sound6.play();
+    });
+    document.getElementById('donut7').addEventListener('click', function () {
+        sound7.play();
+    });
+    document.getElementById('donut8').addEventListener('click', function () {
+        sound8.play();
+    });
+    document.getElementById('donut9').addEventListener('click', function () {
+        sound9.play();
+    });
+};
+</script>
+
+</body>
+
+</html>
